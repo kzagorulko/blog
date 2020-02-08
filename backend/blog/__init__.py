@@ -47,6 +47,9 @@ def create_app(config=None, instance_path=None):
         except OSError:
             pass
 
+    from .resources import api
+    api.init_app(app)
+
     from . import models
 
     from .database import db
