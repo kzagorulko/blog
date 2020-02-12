@@ -9,6 +9,6 @@ def no_spacing_string(max_length=None, min_length=None):
         if min_length and len(value) < min_length:
             raise ValueError(
                 f'This field must be longer than {min_length} characters'
-        )
+            )
         return value
     return validate
