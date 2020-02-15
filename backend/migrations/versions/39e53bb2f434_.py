@@ -1,4 +1,4 @@
-"""empty message
+"""created user
 
 Revision ID: 39e53bb2f434
 Revises: 
@@ -25,6 +25,7 @@ def upgrade():
     sa.Column('username', sa.String(length=50), nullable=False),
     sa.Column('password', sa.String(length=50), nullable=False),
     sa.Column('email', sa.String(length=70), nullable=False),
+    sa.Column('identity', sa.String(length=36), nullable=False),
     sa.Column('privacy', privacy_type, nullable=False),
     sa.Column('is_active', sa.Boolean(create_constraint=False), nullable=False),
     sa.PrimaryKeyConstraint('id', name=op.f('pk_users')),

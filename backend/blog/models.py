@@ -16,6 +16,7 @@ class UserModel(db.Model):
     username = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(70), unique=True, nullable=False)
+    identity = db.Column(db.String(36), unique=True, nullable=False)
     privacy = db.Column(
         db.Enum(PrivacyType), nullable=False, default=PrivacyType.ALL
     )
